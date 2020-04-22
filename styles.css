@@ -1,0 +1,115 @@
+.masthead {
+    height: 100vh;
+    min-height: 500px;
+    background-image: url('https://cdn.pixabay.com/photo/2019/06/14/06/09/utah-4272944_1280.jpg');
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+  }
+
+ #div2{
+     background-color: #F5F5F5;
+ }
+
+ .imgWrap {
+    position: relative;
+    height: 300px;
+    width: 420px;
+    
+    color: black;
+  }
+  
+  .imgLink {
+     position: absolute;
+    top: 5%;
+    bottom: 5%;
+    left: 8%;
+    right: 5%; 
+    
+    background: white;
+    color: black;
+    visibility: hidden;
+    opacity: 0;
+  
+    /* transition effect. not necessary */
+    transition: opacity .2s, visibility .2s;
+  }
+
+  .imgButton {
+      
+    top: 50%;
+    left: 50%;
+    padding: 20px;
+    margin: -70px 0 0 -120px;
+    color: blue;
+    visibility: hidden;
+    opacity: 0; 
+  
+    /* transition effect. not necessary */
+    transition: opacity .2s, visibility .2s;
+  }
+  
+  .imgWrap:hover .imgLink {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .imgWrap:hover .imgButton {
+    visibility: visible;
+    opacity: 1;
+  }
+  .navbar-nav.navbar-center { 
+    position: absolute; 
+    left: 50%; 
+    transform: translatex(-50%); 
+    padding-top: 23px;
+    padding-bottom: 23px;
+} 
+header {
+  position: relative;
+  background-color: black;
+  height: 100vh;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+header video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+header .container {
+  position: relative;
+  z-index: 2;
+}
+
+header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+@media (pointer: coarse) and (hover: none) {
+  header {
+    background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
+  }
+  header video {
+    display: none;
+  }
+}
